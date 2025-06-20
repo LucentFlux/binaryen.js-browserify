@@ -1,2 +1,2 @@
-# binaryen-cli-browser
-Automatic browser builds of the binaryen CLI tools
+# binaryen.js browserify
+Automatic builds of the binaryen CLI tools for use in the browser.
