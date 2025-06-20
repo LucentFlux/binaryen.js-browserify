@@ -96,7 +96,6 @@ jobs:
           mkdir -p "../../bin/$tool"
           mv "./bin/$tool.js" "../../bin/$tool/index.js"
           sed "s/binaryen-cli-tool/$tool/g" "../../package.json" > "../../bin/$tool/package.json"
-          cp "../../package-lock.json" > "../../bin/$tool/package-lock.json"
         done
         cd ../..
     - name: "Test tools"
