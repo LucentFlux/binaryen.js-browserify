@@ -104,7 +104,7 @@ jobs:
           node "./bin/$tool/index.js"
         done
     - name: "Push changes to GitHub"
-      if: (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && matrix.emsdk == 'tot'
+      if: ${{ ( github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' ) && matrix.emsdk == 'tot' }}
       run: |
         git add ./binaryen ./bin/*
         npm version $VERSION --no-git-tag-version --force
@@ -121,7 +121,7 @@ jobs:
         git tag "v$VERSION"
         git push -u origin "v$VERSION"
     - name: "Publish to npm"
-      if: (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && matrix.emsdk == 'tot'
+      if: ${{ ( github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' ) && matrix.emsdk == 'tot' }}
       env:
         NPM_REGISTRY: "registry.npmjs.org"
         NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
