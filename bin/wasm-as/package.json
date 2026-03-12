@@ -1,7 +1,7 @@
 {
     "name": "wasm-as-browserify",
     "description": "Browser builds of the Binaryen tool wasm-as.",
-    "version": "126.0.0",
+    "version": "127.0.0",
     "license": "Apache-2.0",
     "repository": {
         "type": "git",
