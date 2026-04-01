@@ -1,7 +1,7 @@
 {
     "name": "binaryen-cli-tool-browserify",
     "description": "Browser builds of the Binaryen tool binaryen-cli-tool.",
-    "version": "128.0.0",
+    "version": "129.0.0",
     "license": "Apache-2.0",
     "repository": {
         "type": "git",
